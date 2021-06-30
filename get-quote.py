@@ -1,11 +1,16 @@
+import random
+
 def prime():
-  print("Keep it logically awesome.")
+  #print("Keep it logically awesome.")
+  
+  f = open("quotes.txt")
+  quotes = f.readlines()
+  f.close()
+  
+  last = len(quotes) - 1
+  rnd = random.randint(0, last)
 
-  #f = open("quotes.txt")
-  #quotes = f.readlines()
-  #f.close()
-
-  #print(quotes)
+  print(quotes[rnd])
 
 if __name__== "__main__":
   prime()
